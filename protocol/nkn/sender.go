@@ -10,8 +10,8 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/cloudevents/sdk-go/v2/binding"
-	"github.com/cloudevents/sdk-go/v2/protocol"
+	"github.com/JeffNeff/sdk-go/v2/binding"
+	"github.com/JeffNeff/sdk-go/v2/protocol"
 	nkn "github.com/nknorg/nkn-sdk-go"
 )
 
