@@ -1,3 +1,3 @@
-module github.com/cloudevents/sdk-go/protocol/nkn
+module github.com/JeffNeff/sdk-go/protocol/nkn
 
 go 1.18

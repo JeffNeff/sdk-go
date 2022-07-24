@@ -10,8 +10,8 @@ import (
 	"log"
 	"os"
 
-	cenkn "github.com/cloudevents/sdk-go/protocol/nkn"
-	cloudevents "github.com/cloudevents/sdk-go/v2"
+	cenkn "github.com/JeffNeff/sdk-go/protocol/nkn"
+	cloudevents "github.com/JeffNeff/sdk-go/v2"
 	"github.com/kelseyhightower/envconfig"
 )
 
