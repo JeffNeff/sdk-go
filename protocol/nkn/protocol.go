@@ -10,7 +10,6 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/JeffNeff/nkn-sdk-go"
 	nkn "github.com/nknorg/nkn-sdk-go"
 )
 
