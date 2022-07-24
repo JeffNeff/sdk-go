@@ -7,11 +7,8 @@ package nkn
 
 import (
 	"context"
-	"encoding/hex"
-	"fmt"
 
 	"github.com/JeffNeff/sdk-go/v2/binding"
-	"github.com/JeffNeff/sdk-go/v2/protocol"
 	nkn "github.com/nknorg/nkn-sdk-go"
 )
 
@@ -28,29 +25,6 @@ func (s *Sender) Send(ctx context.Context, in binding.Message, transformers ...b
 	}
 
 	return err
-}
-
-// NewSender creates a new Sender which wraps an amqp.Sender in a binding.Sender
-func NewSender(s string, options ...SenderOptionFunc) protocol.Sender {
-	seed, err := hex.DecodeString(s)
-	if err != nil {
-		fmt.Printf("Error decoding seed from hex: %v", err)
-		return nil
-	}
-
-	account, err := nkn.NewAccount(seed)
-	if err != nil {
-		fmt.Printf("Error creating NKN account from seed: %v", err)
-		return nil
-	}
-
-	client, err := nkn.NewClient(account, "any string", nil)
-	if err != nil {
-		fmt.Printf("Error creating NKN client: %v", err)
-		return nil
-	}
-
-	return client
 }
 
 type SenderOptionFunc func(sender *Sender)
